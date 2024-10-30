@@ -24,20 +24,22 @@ return {
       require "configs.lspconfig"
     end,
   },
-
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "vim",
-        "lua",
-        "vimdoc",
-        "html",
-        "css",
-        "python",
-      },
-    },
+    build = ":TSUpdate",
+    config = function()
+      require("nvim-treesitter.configs").setup {
+        ensure_installed = { "lua", "python", "javascript", "html", "css", "typescript", "tsx", "rust" }, -- Add languages as needed
+        highlight = {
+          enable = true,                                                                                  -- Enable syntax highlighting
+        },
+        indent = {
+          enable = true, -- Enable indentation based on Treesitter
+        },
+      }
+    end,
   },
+
   {
     "kdheepak/lazygit.nvim",
     lazy = true,
@@ -57,5 +59,18 @@ return {
     keys = {
       { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
     },
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    ft = {
+      "javascript",
+      "javascriptreact",
+      "typescriptreact",
+      "typescript",
+      "html",
+    },
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
   },
 }
