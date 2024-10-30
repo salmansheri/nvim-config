@@ -87,3 +87,15 @@ require("catppuccin").setup {
 
 -- setup must be called before loading
 vim.cmd.colorscheme "catppuccin"
+
+require("nvim-tree").setup {
+  filters = {
+    dotfiles = false,    -- Set to false to show dotfiles
+    git_ignored = false, -- You can set this to false if you want to show git-ignored files as well
+  },
+  view = {
+    adaptive_size = true,
+    width = 30,
+    side = "left",
+  },
+}

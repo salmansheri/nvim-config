@@ -6,7 +6,7 @@ local util = require "lspconfig/util"
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls", "ts_ls", "clangd", "bashls" }
+local servers = { "html", "cssls", "ts_ls", "clangd", "bashls", "tailwindcss", "phpactor", "marksman" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config

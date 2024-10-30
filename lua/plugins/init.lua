@@ -8,12 +8,13 @@ return {
   opts = {
     ensure_installed = {
       "pyright", -- Python language server
-      "black",   -- Code formatter
-      "isort",   -- Sorts imports
-      "flake8",  -- Linter
+      "black", -- Code formatter
+      "isort", -- Sorts imports
+      "flake8", -- Linter
       "ts_ls",
       "eslint-lsp",
       "prettier",
+      "phpactor",
     },
   },
 
@@ -29,9 +30,9 @@ return {
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup {
-        ensure_installed = { "lua", "python", "javascript", "html", "css", "typescript", "tsx", "rust" }, -- Add languages as needed
+        ensure_installed = { "lua", "python", "javascript", "html", "css", "typescript", "tsx", "rust", "markdown" }, -- Add languages as needed
         highlight = {
-          enable = true,                                                                                  -- Enable syntax highlighting
+          enable = true, -- Enable syntax highlighting
         },
         indent = {
           enable = true, -- Enable indentation based on Treesitter
