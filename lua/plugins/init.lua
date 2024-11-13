@@ -1,5 +1,9 @@
 return {
   {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
+  {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
@@ -8,9 +12,9 @@ return {
   opts = {
     ensure_installed = {
       "pyright", -- Python language server
-      "black", -- Code formatter
-      "isort", -- Sorts imports
-      "flake8", -- Linter
+      "black",   -- Code formatter
+      "isort",   -- Sorts imports
+      "flake8",  -- Linter
       "ts_ls",
       "eslint-lsp",
       "prettier",
@@ -32,7 +36,7 @@ return {
       require("nvim-treesitter.configs").setup {
         ensure_installed = { "lua", "python", "javascript", "html", "css", "typescript", "tsx", "rust", "markdown" }, -- Add languages as needed
         highlight = {
-          enable = true, -- Enable syntax highlighting
+          enable = true,                                                                                              -- Enable syntax highlighting
         },
         indent = {
           enable = true, -- Enable indentation based on Treesitter
