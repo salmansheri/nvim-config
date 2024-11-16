@@ -78,4 +78,19 @@ return {
       require("nvim-ts-autotag").setup()
     end,
   },
+  {
+    "echasnovski/mini.nvim",
+    version = "*",
+    lazy = true,
+    config = function()
+      require("mini.nvim").setup()
+    end,
+  },
+  {
+    "echasnovski/mini.animate",
+    version = false,
+    config = function()
+      require("mini.animate").setup()
+    end,
+  },
 }
