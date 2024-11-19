@@ -44,6 +44,7 @@ return {
       require("nvim-treesitter.configs").setup {
         ensure_installed = {
           "lua",
+          "astro",
           "python",
           "javascript",
           "html",
@@ -92,6 +93,7 @@ return {
       "typescriptreact",
       "typescript",
       "html",
+      "astro",
     },
     config = function()
       require("nvim-ts-autotag").setup()
