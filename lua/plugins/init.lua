@@ -57,6 +57,7 @@ return {
           "svelte",
           "prisma",
         },               -- Add languages as needed
+        auto_install=true, 
         highlight = {
           enable = true, -- Enable syntax highlighting
         },
@@ -96,6 +97,7 @@ return {
       "typescript",
       "html",
       "astro",
+      "svelte",
     },
     config = function()
       require("nvim-ts-autotag").setup()
