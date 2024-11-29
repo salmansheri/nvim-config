@@ -54,6 +54,8 @@ return {
           "rust",
           "markdown",
           "markdown_inline",
+          "svelte",
+          "prisma",
         },               -- Add languages as needed
         highlight = {
           enable = true, -- Enable syntax highlighting
